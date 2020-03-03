@@ -1,0 +1,14 @@
+let lista1 = new Set([1, 3, 10, 30, 100, 300]);
+let lista2 = new Set([1, 3, 20, 40, 200, 400]);
+let union = new Set([...lista1, ...lista2]);
+let inter = new Set([...lista1].filter(x => lista2.has(x)));
+let dif= new Set([...lista1].filter(x => !lista2.has(x)));
+let dif2 = new Set([...lista2].filter(x => !lista1.has(x)));
+console.log("Union ");
+console.log(union);
+console.log("Interseccion ");
+console.log(inter);
+console.log("Diferencia A-B");
+console.log(dif);
+console.log("Diferencia B-A");
+console.log(dif2);
